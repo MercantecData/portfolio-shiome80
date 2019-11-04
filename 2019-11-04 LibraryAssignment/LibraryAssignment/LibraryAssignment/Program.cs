@@ -6,16 +6,14 @@ namespace LibraryAssignment
     {
         static void Main(string[] args)
         {
+            // Lol library
             Library localLibrary = new Library("Viborg", 5);
+            Console.WriteLine($"Hello welcome to {localLibrary.city} library. \nWe are currently {localLibrary.employees} at work\n");
 
-            Console.WriteLine($"Hello welcome to {localLibrary.city} library. \nWe are currently {localLibrary.employees} at work");
-
-            Books firstBook = new Books("Something dark side", "Comedy", 0);
-
+            // Maybe move this to another function (Menu)
+            Books firstBook = new Books("Something dark side", "Comedy", 3);
             Console.WriteLine($"You picked {firstBook.title}");
-            Console.WriteLine($"Copies left {firstBook.copies}");
-            Console.WriteLine("Proceed to checkout?");
-
+            Console.WriteLine("Proceed to checkout?\n");
             Console.WriteLine(Books.BookLoan(firstBook.title, firstBook.copies));
             
             // Capture time of checkout

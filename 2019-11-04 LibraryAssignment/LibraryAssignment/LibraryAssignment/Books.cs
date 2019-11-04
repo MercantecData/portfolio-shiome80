@@ -42,7 +42,7 @@ namespace LibraryAssignment
         public static string BookRenew(string loanDate)
         {
             DateTime date = DateTime.Parse(loanDate);
-            Console.WriteLine("How many days would you like to extend?");
+            Console.WriteLine("\nHow many days would you like to extend?");
             string input = Console.ReadLine();
             switch (input)
             {
