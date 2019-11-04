@@ -1,0 +1,11 @@
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\bin\Debug\netcoreapp3.0\LibraryAssignment.exe
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\bin\Debug\netcoreapp3.0\LibraryAssignment.deps.json
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\bin\Debug\netcoreapp3.0\LibraryAssignment.runtimeconfig.json
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\bin\Debug\netcoreapp3.0\LibraryAssignment.runtimeconfig.dev.json
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\bin\Debug\netcoreapp3.0\LibraryAssignment.dll
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\bin\Debug\netcoreapp3.0\LibraryAssignment.pdb
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\obj\Debug\netcoreapp3.0\LibraryAssignment.csprojAssemblyReference.cache
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\obj\Debug\netcoreapp3.0\LibraryAssignment.AssemblyInfoInputs.cache
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\obj\Debug\netcoreapp3.0\LibraryAssignment.AssemblyInfo.cs
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\obj\Debug\netcoreapp3.0\LibraryAssignment.dll
+C:\Users\RJHa.skp\source\repos\shiome80\portfolio_Learnspace\2019-11-04 LibraryAssignment\LibraryAssignment\LibraryAssignment\obj\Debug\netcoreapp3.0\LibraryAssignment.pdb
