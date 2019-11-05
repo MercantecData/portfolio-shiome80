@@ -1,0 +1,11 @@
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\bin\Debug\netcoreapp3.0\Objekt orienteret prog.exe
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\bin\Debug\netcoreapp3.0\Objekt orienteret prog.deps.json
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\bin\Debug\netcoreapp3.0\Objekt orienteret prog.runtimeconfig.json
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\bin\Debug\netcoreapp3.0\Objekt orienteret prog.runtimeconfig.dev.json
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\bin\Debug\netcoreapp3.0\Objekt orienteret prog.dll
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\bin\Debug\netcoreapp3.0\Objekt orienteret prog.pdb
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\obj\Debug\netcoreapp3.0\Objekt orienteret prog.csprojAssemblyReference.cache
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\obj\Debug\netcoreapp3.0\Objekt orienteret prog.AssemblyInfoInputs.cache
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\obj\Debug\netcoreapp3.0\Objekt orienteret prog.AssemblyInfo.cs
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\obj\Debug\netcoreapp3.0\Objekt orienteret prog.dll
+C:\Users\RJHa.skp\source\repos\Objekt orienteret prog\Objekt orienteret prog\obj\Debug\netcoreapp3.0\Objekt orienteret prog.pdb
