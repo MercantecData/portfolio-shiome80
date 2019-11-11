@@ -7,6 +7,19 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.mail {
+    margin: auto;
+    width: 30%;
+    flex-direction: row;
+    font-family: 'Courier New', Courier, monospace;
+}
+.mail:link, .mail:visited {
+    color: black;
+}
+.mail:hover, .mail:active {
+    color: black;
+}
+
 img {
     display: block;
     max-width: 400px;
@@ -29,35 +42,27 @@ img {
 
 body {
     background-color: grey;
+    background-image: url(background.jpg);
 }
 
-.item2 {
-    border: 1px solid black;
-}
-
-.item3 {
-    border: 1px solid black;
-}
-
-.item6 {
-    border: 1px solid black;
-}
-
-.item7 {
-    border: 1px solid black;
-}
 .grid-container {
     display: grid;
-    grid-template: 150px / auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     padding: 10px;
-    grid-column-gap: 80px;
-    grid-row-gap: 100px;
-    /*background-color: blueviolet;*/
+    margin-right: 200px;
+    margin-left: 200px;
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
 }
 
 .grid-container > div {
-    /*background-color: crimson;*/
     font-family: 'Courier New', Courier, monospace;
-    margin: auto;
+    margin-right: 10px;
     padding-left: 10px;
+    max-width: 400px;
+}
+
+footer {
+    background-color: lightblue;
 }
