@@ -25,9 +25,8 @@ function myOwnFunction (button) {
 }
 
 function printContent() {
-    var firstname = document.getElementById("firstname").value;
-    console.log(firstname);
-    var lastname = document.getElementById("lastname").value;
-    console.log(lastname);
-    document.getElementById("blankSpace").textContent = x;
+    var firstname = document.getElementById("customFirst").value;
+    var lastname = document.getElementById("customLast").value;
+    var fullname = firstname + " " + lastname;
+    document.getElementById("fullname").innerHTML = fullname;
 }

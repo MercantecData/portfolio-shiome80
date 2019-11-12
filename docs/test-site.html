@@ -25,9 +25,9 @@
         <h1>Forms</h1>
         <form id="textInputForm1">
             First Name:<br>
-            <input type="text" name="firstname"><br>
+            <input type="text" name="formOneFirstname"><br>
             Last Name:<br>
-            <input type="text" name="lastname"><br>
+            <input type="text" name="formTwoLastname"><br>
         </form>
     </div>
 
@@ -46,9 +46,9 @@
             <legend>Personal Data</legend>    
             <form action="/action_page.php">
                 First name:<br>
-                <input type="text" name="firstname" placeholder="First Name"><br>
+                <input type="text" name="formThreeFirstname" placeholder="First Name"><br>
                 Last name:<br>
-                <input type="text" name="lastname" placeholder="Last Name"><br><br>
+                <input type="text" name="formThreeLastname" placeholder="Last Name"><br><br>
                 <input type="submit" value="Submit">
             </form>
         </fieldset>
@@ -58,18 +58,19 @@
         <h1>Custom Form (WIP)</h1>
         <form>
             First Name:<br>
-            <input type="text" name="firstname" id="customFirst"><br>
+            <input type="text" name="customFirstname" id="customFirst"><br>
             Last Name:<br>
-            <input type="text" name="lastname" id="customLast"><br>
+            <input type="text" name="customLastname" id="customLast"><br>
             <br>
-            <button onclick="printContent()">Submit</button>
+            <button type="button" onclick="printContent()">Submit</button>
         </form>
     </div>
 
     <div class="item9" id="fjol">
         <img id= "obiwan" src = "visible.jpg">
         <div class="empty">
-            <div id="blankSpace"></div>
+            <p id="fullname"></p><br>
         </div>
     </div>
+    <br>
 </div>
