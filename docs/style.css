@@ -16,6 +16,7 @@
     color: black;
 }
 
+
 h1 {
     align-self: auto;
     font-family: 'Courier New', Courier, monospace;
@@ -23,6 +24,7 @@ h1 {
 h2 {
     font-family: 'Courier New', Courier, monospace;
 }
+
 
 .mail {
     padding-left: 10px;
@@ -40,12 +42,14 @@ h2 {
     color: black;
 }
 
+
 img {
     display: none;
     max-width: 400px;
     margin: auto;
     padding-top: 50px;
 }
+
 
 .location {
     display: block;
@@ -69,6 +73,7 @@ img {
     width: 30%;
 }
 
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -88,6 +93,18 @@ img {
 
 .center {
     text-align: center;
+}
+
+.myOwnButton {
+    align-items: flex-start;
+    display: inline-block;
+    background-color: lime;
+    border: magenta solid 2px;
+    padding: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.myOwnButton:hover {
+    background-color: mediumorchid;
 }
 
 body {

@@ -5,24 +5,71 @@
 
 <div class="topNav">
     <a class="active" href="index.html">Home</a>
-    <a href="memes.html">Memes</a>
     <a href="contact.html">Contact</a>
+
+     <!--mailto act like a guestbook except it sends ACTUAL mail to me-->
     <a href="mailto: rene_juul_hansen@hotmail.com">Send mail</a>
     <a href="test-site.html">Test site here</a>
 </div>
 
-<h1>Forms</h1>
-<form id="textInputForm1">
-    First Name:<br>
-    <input type="text" name="firstname"><br>
-    Last Name:<br>
-    <input type="text" name="lastname"><br>
-</form>
+<!--This is where the fun happens------------------------------------->
+<button onclick=changeText()>Edit Text</button>
+<button onclick="hideFunc()" style="margin-top: 10px;">Show / Hide</button>
+<button onclick="removeSomething()">Remove form</button>
+<div class="myOwnButton" onclick="myOwnFunction(this)">Min div knap</div>
+<!-------------------------------------------------------------------->
 
-<br>
+<div class="grid-container">
 
-<form>
-    <input type="radio" name="gender" value="male" checked>Male<br>
-    <input type="radio" name="gender" value="female">Female<br>
-    <input type="radio" name="gender" value="other">Other<br>
-</form>
+    <div class="item5" id="form1">
+        <h1>Forms</h1>
+        <form id="textInputForm1">
+            First Name:<br>
+            <input type="text" name="firstname"><br>
+            Last Name:<br>
+            <input type="text" name="lastname"><br>
+        </form>
+    </div>
+
+    <div class="item6" id="form2">
+        <h1>Form 2</h1>
+        <form>
+            <input type="radio" name="gender" value="male" checked>Male<br>
+            <input type="radio" name="gender" value="female">Female<br>
+            <input type="radio" name="gender" value="other">Other<br>
+        </form>
+    </div>
+
+    <div class="item7" id="form3">
+        <h1>Form3</h1>
+        <fieldset>
+            <legend>Personal Data</legend>    
+            <form action="/action_page.php">
+                First name:<br>
+                <input type="text" name="firstname" placeholder="First Name"><br>
+                Last name:<br>
+                <input type="text" name="lastname" placeholder="Last Name"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+    </div>
+<!--
+    <div class="item8" id="form4">
+        <h1>Custom Form</h1>
+        <form>
+            First Name:<br>
+            <input type="text" name="firstname" id="customFirst"><br>
+            Last Name:<br>
+            <input type="text" name="lastname" id="customLast"><br>
+            <br>
+            <button onclick="printContent()">Submit</button>
+        </form>
+    </div>
+-->
+    <div class="item9" id="fjol">
+        <img id= "obiwan" src = "visible.jpg">
+        <div class="empty">
+            <div id="blankSpace"></div>
+        </div>
+    </div>
+</div>
