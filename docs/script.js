@@ -23,7 +23,7 @@ function removeSomething() {
 function myOwnFunction (button) {
     button.style.backgroundColor = "white" ;
 }
-/*
+
 function printContent() {
     var firstname = document.getElementById("firstname").value;
     console.log(firstname);
@@ -31,4 +31,3 @@ function printContent() {
     console.log(lastname);
     document.getElementById("blankSpace").textContent = x;
 }
-*/
