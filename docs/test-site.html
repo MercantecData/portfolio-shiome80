@@ -17,6 +17,7 @@
 <button onclick="hideFunc()" style="margin-top: 10px;">Show / Hide</button>
 <button onclick="removeSomething()">Remove form</button>
 <div class="myOwnButton" onclick="myOwnFunction(this)">Min div knap</div>
+<button type="button" id="testbtn" onclick="buttonClicked()">Font Print Test</button>
 <!-------------------------------------------------------------------->
 
 <div class="grid-container">
@@ -41,7 +42,7 @@
     </div>
 
     <div class="item7" id="form3">
-        <h1>Form3</h1>
+        <h1>Form3 (submit needs backend)</h1>
         <fieldset>
             <legend>Personal Data</legend>    
             <form action="/action_page.php">
@@ -62,15 +63,26 @@
             Last Name:<br>
             <input type="text" name="customLastname" id="customLast"><br>
             <br>
-            <button type="button" onclick="printContent()">Submit</button>
+            <button type="button" onclick="addP()">Submit</button>
+            <button type="button" onclick="clearPrint()">Reset</button>
         </form>
+        <div class="empty">
+                <p id="blankSpace"></p><br>
+            </div>
     </div>
 
     <div class="item9" id="fjol">
         <img id= "obiwan" src = "visible.jpg">
-        <div class="empty">
-            <p id="fullname"></p><br>
-        </div>
+        
     </div>
     <br>
 </div>
+
+<footer>
+    <div class="footerGrid">
+        <a class="blank"></a>
+        <a class="number">Tlf: 26 21 66 88</a>
+        <a class="email">Email: rene_juul_hansen@hotmail.com</a>
+        <a class="blank2"></a>
+    </div>
+</footer>

@@ -74,10 +74,11 @@ img {
 }
 
 
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto 50px;
     padding: 10px;
     margin-right: 200px;
     margin-left: 200px;
@@ -91,9 +92,15 @@ img {
     max-width: 400px;
 }
 
+
+
+.fullname {
+    font-family: 'Courier New', Courier, monospace;
+}
 .center {
     text-align: center;
 }
+
 
 .myOwnButton {
     align-items: flex-start;
@@ -107,10 +114,30 @@ img {
     background-color: mediumorchid;
 }
 
+
 body {
     background-color: grey;
     background-image: url(background.jpg);
+    position: relative;
+}
+
+
+.footerGrid {
+    display: grid;
+    grid-template-areas: "blank number email blank2";
 }
 footer {
-    background-color: lightblue;
+    background-color: #333;
+    height: 50px;
+    width: 100%;
+    position: relative; 
+}
+footer a {
+    font-family: 'Courier New', Courier, monospace;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
