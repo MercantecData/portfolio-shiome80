@@ -1,0 +1,218 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
+--
+-- Vært: 127.0.0.1
+-- Genereringstid: 26. 11 2019 kl. 14:42:58
+-- Serverversion: 10.4.8-MariaDB
+-- PHP-version: 7.1.33
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `shop`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `addresses`
+--
+
+CREATE TABLE `addresses` (
+  `addr_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `zip_code` int(20) DEFAULT NULL,
+  `country` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Data dump for tabellen `addresses`
+--
+
+INSERT INTO `addresses` (`addr_id`, `user_id`, `address`, `city`, `zip_code`, `country`) VALUES
+(1, 1, 'vejvej 1', 'South Park', 202020, 'Colorado'),
+(2, 2, 'vejvej 2', 'South Park', 202020, 'Colorado'),
+(3, 3, 'vejvej 3', 'South Park', 202020, 'Colorado'),
+(4, 4, 'vejvej 4', 'South Park', 202020, 'Colorado'),
+(5, 5, 'Street 1', 'South Park', 202020, 'Colorado'),
+(6, 6, 'Street 2', 'South Park', 202020, 'Colorado'),
+(7, 7, 'Street 3', 'South Park', 202020, 'Colorado'),
+(8, 8, 'Street 4', 'South Park', 202020, 'Colorado'),
+(9, 9, 'Street 5', 'South Park', 202020, 'Colorado'),
+(10, 10, 'Street 6', 'South Park', 202020, 'Colorado');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(11) NOT NULL,
+  `prod_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `addr_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Data dump for tabellen `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `prod_id`, `user_id`, `addr_id`) VALUES
+(61552, 5, 8, 8),
+(61553, 6, 5, 5),
+(61554, 2, 2, 2),
+(61555, 7, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `products`
+--
+
+CREATE TABLE `products` (
+  `prod_id` int(11) NOT NULL,
+  `prod_name` varchar(255) DEFAULT NULL,
+  `prod_description` varchar(255) DEFAULT NULL,
+  `prod_stock` int(11) DEFAULT NULL,
+  `prod_price` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Data dump for tabellen `products`
+--
+
+INSERT INTO `products` (`prod_id`, `prod_name`, `prod_description`, `prod_stock`, `prod_price`) VALUES
+(1, 'Dragonball', 'Magical when combined', 7, 1000000),
+(2, 'Cure for cancer', 'Not responsable for side effects', 1, 99),
+(3, 'Grapling Hook', 'Batmans own', 3, 500),
+(4, 'Dyne & Sengesæt fra Jysk', 'Rest parti', 5, 200),
+(5, 'Mystery box', 'Who knows, could be rice, could be a Cyper car', 2, 60000),
+(6, 'Realdoll', 'Slightly used', 1, 200),
+(7, 'Deal with the devil', 'No delivery to Jylland', 999999, 1),
+(8, 'Food plate', 'Enough to end world hunger', 9, 500);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Data dump for tabellen `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`) VALUES
+(1, 'skinkebørge1234', 'lk@hotmail.com', 'Lars', 'Karlsen'),
+(2, 'manbearpig69', 'mbp@sølvpapirshat.dk', 'man', 'bearpig'),
+(3, 'princessKenny', 'princessKen@something.com', 'Kenny', 'mhpghph'),
+(4, 'Mysterion', 'mysterion@hero.com', 'Secret', 'Secret'),
+(5, 'MintberryCrunch', 'mbc@hero.com', 'Mintberry', 'Crunch'),
+(6, 'JediYoda', 'notthegremlin@gmail.com', 'Yo', 'da'),
+(7, '1WishPlz', 'sirdiesalot@underworld.com', 'Krillin', 'Baldguy'),
+(8, 'Staninator', 'care@nothing.com', 'Stan', 'Marsh'),
+(9, 'Kylesan', 'jewfro@hebrew.com', 'Kyle', 'Brawfloski'),
+(10, 'NewReich', 'suckmyballs@school.com', 'Eric', 'Cartman');
+
+--
+-- Begrænsninger for dumpede tabeller
+--
+
+--
+-- Indeks for tabel `addresses`
+--
+ALTER TABLE `addresses`
+  ADD PRIMARY KEY (`addr_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indeks for tabel `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `prod_id` (`prod_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `addr_id` (`addr_id`);
+
+--
+-- Indeks for tabel `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`prod_id`);
+
+--
+-- Indeks for tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Brug ikke AUTO_INCREMENT for slettede tabeller
+--
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `addresses`
+--
+ALTER TABLE `addresses`
+  MODIFY `addr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61556;
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `products`
+--
+ALTER TABLE `products`
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- Begrænsninger for dumpede tabeller
+--
+
+--
+-- Begrænsninger for tabel `addresses`
+--
+ALTER TABLE `addresses`
+  ADD CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Begrænsninger for tabel `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`prod_id`) REFERENCES `products` (`prod_id`),
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`addr_id`) REFERENCES `addresses` (`addr_id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
