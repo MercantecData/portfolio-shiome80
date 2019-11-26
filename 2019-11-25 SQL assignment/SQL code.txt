@@ -70,11 +70,11 @@ CREATE TABLE `orders` (
 -- Data dump for tabellen `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `prod_id`, `user_id`, `addr_id`) VALUES
-(61552, 5, 8, 8),
-(61553, 6, 5, 5),
-(61554, 2, 2, 2),
-(61555, 7, 1, 1);
+INSERT INTO `orders` (`prod_id`, `user_id`, `addr_id`) VALUES
+(5, 8, 8),
+(6, 5, 5),
+(2, 2, 2),
+(7, 1, 1);
 
 -- --------------------------------------------------------
 
