@@ -2,10 +2,10 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Vært: 127.0.0.1
--- Genereringstid: 26. 11 2019 kl. 14:42:58
--- Serverversion: 10.4.8-MariaDB
--- PHP-version: 7.1.33
+-- Host: 127.0.0.1
+-- Generation Time: Nov 27, 2019 at 02:03 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur-dump for tabellen `addresses`
+-- Table structure for table `addresses`
 --
 
 CREATE TABLE `addresses` (
@@ -38,7 +38,7 @@ CREATE TABLE `addresses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Data dump for tabellen `addresses`
+-- Dumping data for table `addresses`
 --
 
 INSERT INTO `addresses` (`addr_id`, `user_id`, `address`, `city`, `zip_code`, `country`) VALUES
@@ -56,30 +56,30 @@ INSERT INTO `addresses` (`addr_id`, `user_id`, `address`, `city`, `zip_code`, `c
 -- --------------------------------------------------------
 
 --
--- Struktur-dump for tabellen `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
-  `prod_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `addr_id` int(11) DEFAULT NULL
+  `addr_id` int(11) DEFAULT NULL,
+  `prod_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Data dump for tabellen `orders`
+-- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`prod_id`, `user_id`, `addr_id`) VALUES
-(5, 8, 8),
-(6, 5, 5),
-(2, 2, 2),
-(7, 1, 1);
+INSERT INTO `orders` (`order_id`, `user_id`, `addr_id`, `prod_id`) VALUES
+(61556, 8, 8, 5),
+(61557, 5, 5, 6),
+(61558, 2, 2, 2),
+(61559, 1, 1, 7);
 
 -- --------------------------------------------------------
 
 --
--- Struktur-dump for tabellen `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -91,7 +91,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Data dump for tabellen `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`prod_id`, `prod_name`, `prod_description`, `prod_stock`, `prod_price`) VALUES
@@ -102,12 +102,14 @@ INSERT INTO `products` (`prod_id`, `prod_name`, `prod_description`, `prod_stock`
 (5, 'Mystery box', 'Who knows, could be rice, could be a Cyper car', 2, 60000),
 (6, 'Realdoll', 'Slightly used', 1, 200),
 (7, 'Deal with the devil', 'No delivery to Jylland', 999999, 1),
-(8, 'Food plate', 'Enough to end world hunger', 9, 500);
+(8, 'Food plate', 'Enough to end world hunger', 9, 500),
+(9, 'Bucket', 'Steel', 50, 20),
+(10, 'Rope', 'Knots not included', 5, 10);
 
 -- --------------------------------------------------------
 
 --
--- Struktur-dump for tabellen `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -119,7 +121,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Data dump for tabellen `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`) VALUES
@@ -135,82 +137,82 @@ INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`) VALUE
 (10, 'NewReich', 'suckmyballs@school.com', 'Eric', 'Cartman');
 
 --
--- Begrænsninger for dumpede tabeller
+-- Indexes for dumped tables
 --
 
 --
--- Indeks for tabel `addresses`
+-- Indexes for table `addresses`
 --
 ALTER TABLE `addresses`
   ADD PRIMARY KEY (`addr_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indeks for tabel `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`),
-  ADD KEY `prod_id` (`prod_id`),
   ADD KEY `user_id` (`user_id`),
-  ADD KEY `addr_id` (`addr_id`);
+  ADD KEY `addr_id` (`addr_id`),
+  ADD KEY `prod_id` (`prod_id`);
 
 --
--- Indeks for tabel `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`prod_id`);
 
 --
--- Indeks for tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Brug ikke AUTO_INCREMENT for slettede tabeller
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Tilføj AUTO_INCREMENT i tabel `addresses`
+-- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
   MODIFY `addr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Tilføj AUTO_INCREMENT i tabel `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61556;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61560;
 
 --
--- Tilføj AUTO_INCREMENT i tabel `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Tilføj AUTO_INCREMENT i tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- Begrænsninger for dumpede tabeller
+-- Constraints for dumped tables
 --
 
 --
--- Begrænsninger for tabel `addresses`
+-- Constraints for table `addresses`
 --
 ALTER TABLE `addresses`
   ADD CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Begrænsninger for tabel `orders`
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`prod_id`) REFERENCES `products` (`prod_id`),
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`addr_id`) REFERENCES `addresses` (`addr_id`);
+  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`addr_id`) REFERENCES `addresses` (`addr_id`),
+  ADD CONSTRAINT `orders_ibfk_4` FOREIGN KEY (`prod_id`) REFERENCES `products` (`prod_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
