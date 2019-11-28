@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2019 at 02:03 PM
+-- Generation Time: Nov 28, 2019 at 10:08 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -21,6 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `shop`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteOrder` ()  BEGIN
+DELETE FROM orders
+WHERE orders.user_id = 1;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -73,8 +84,7 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`order_id`, `user_id`, `addr_id`, `prod_id`) VALUES
 (61556, 8, 8, 5),
 (61557, 5, 5, 6),
-(61558, 2, 2, 2),
-(61559, 1, 1, 7);
+(61558, 2, 2, 2);
 
 -- --------------------------------------------------------
 
