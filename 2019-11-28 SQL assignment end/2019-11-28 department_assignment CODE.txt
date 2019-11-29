@@ -1,0 +1,107 @@
+CREATE DATABASE department_assignment;
+USE department_assignment;
+
+
+CREATE TABLE employee (
+    dep_id int,
+    emp_id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    emp_first_name varchar(255),
+    emp_last_name varchar(255),
+    emp_department varchar(255),
+    emp_salary_level int,
+    FOREIGN KEY (dep_id) REFERENCES department(dep_id)
+);
+
+INSERT INTO employee (dep_id, emp_first_name, emp_last_name, emp_salary_level) VALUES
+('1', 'Børge', 'Børgesen', '2'),
+('1', 'Jens', 'Jensen', '2'),
+('1', 'Erik', 'Eriksen', '2'),
+('1', 'Jens', 'Keldsen', '1'),
+('2', 'Hans', 'Hansen', '1'),
+('2', 'Anne', 'Madsen', '2');
+
+
+
+    
+CREATE TABLE department (
+    dep_id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    dep_name varchar(255),
+    dep_address varchar(255)
+    );    
+
+INSERT INTO department (dep_name, dep_address) VALUES
+('Mercantec', 'Viborg'),
+('Placeholder', 'Randers');
+
+
+
+
+    
+CREATE TABLE salaries (
+    sal_id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    salary int NOT NULL DEFAULT '0',
+    emp_id int,
+    FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+    );
+
+INSERT INTO salaries (salary, emp_id) VALUES
+('20000', '1'),
+('20000', '2'),
+('20000', '3'),
+('30000', '4'),
+('30000', '5'),
+('20000', '6');
+
+
+
+
+ // her bruger jeg composite key fordi title_id
+ // kan være fx: manager i hver sin 
+ // virksomhed men employee_id er stadig unik
+   
+CREATE TABLE title (
+    title_id int NOT NULL PRIMARY KEY,
+    title varchar(255),
+    emp_id int NOT NULL PRIMARY KEY,
+    FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+    );
+
+INSERT INTO title (title_id, title, emp_id) VALUES
+('1', 'Manager', '4'),
+('1', 'Manager', '5'),
+('2', 'Teacher', '1'),
+('2', 'Teacher', '2'),
+('2', 'Teacher', '3'),
+('2', 'Teacher', '6');
+
+    
+
+
+CREATE TABLE dep_employee (
+    dep_emp_id int AUTO_INCREMENT NOT NULL,
+    dep_id int,
+    emp_id int,
+    FOREIGN KEY (dep_id) REFERENCES department(dep_id),
+    FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+    );
+
+INSERT INTO dep_employee (dep_id, emp_id) VALUES
+('1', '1'),
+('1', '2'),
+('1', '3'),
+('2', '6');
+
+
+
+    
+CREATE TABLE dep_manager (
+    dep_man_id int AUTO_INCREMENT NOT NULL,
+    dep_id int,
+    emp_id int,
+    FOREIGN KEY (dep_id) REFERENCES department(dep_id),
+    FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+    );
+
+INSERT INTO dep_manager (dep_id, emp_id) VALUES
+('1', '4'),
+('2', '5');
