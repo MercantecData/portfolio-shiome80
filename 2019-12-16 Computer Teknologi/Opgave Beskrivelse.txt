@@ -1,7 +1,7 @@
 -- Spil hub hjemmeside --
-En hjemmeside med nogle forskellige konsol baseret spil.
-Udover spillene skal der være mulighed for at chatte med -
-modstandere og/eller alle online.
+En console app game hub (C#) med ekstern chat (HTML/CSS).
+Spillene kører igennem console og der skal være knap til at åbne et chat rum -
+til både fælles og privat beskeder.
 Der skal være en highscore implemteret i spillene.
 Der skal være mulighed for at dele highscores på social media via links.
 
@@ -12,8 +12,11 @@ Da det er de fag som jeg ikke stærk i.
 Fag som indgår:
 Clientside
 Grundlæggende Prog.
-Database
 Netværk
+
+Milepæle :
+- Spil og Hjemmeside kan snakke sammen
+- Chat har fælles og privat chat
 
 Mål:
 Mandag : Håber på at være færdig med spil delen så jeg kan begynde på HTML imorgen
