@@ -68,7 +68,5 @@ namespace Spil_hub
                 }
             }
         }
-
-
     }
 }
