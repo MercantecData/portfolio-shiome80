@@ -22,3 +22,5 @@ Mål:
 Mandag : Håber på at være færdig med spil delen så jeg kan begynde på HTML imorgen
 Tirsdag : Mangler et enkelt spil i menuen minimum og så skal jeg til HTML og CSS
 Onsdag : Implementere Javascript på HTML side for at simulerer en chat uden backend
+Torsdag : Lave point system og færdiggøre mindre hængepartier
+Fredag : Testing og Aflevering
