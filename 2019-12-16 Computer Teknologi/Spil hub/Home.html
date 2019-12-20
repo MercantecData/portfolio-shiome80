@@ -1,10 +1,11 @@
 ﻿<!DOCTYPE html>
 
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
+
+    <script type="text/javascript" src="Script.js"></script>
 
     <title>Chat</title>
 </head>
@@ -16,26 +17,19 @@
         <div class="chatlogs">
 
             <div class="chat client">
-                <p class="chat-message">Test 1 message</p>
+                <p class="chat-message">Client:<br/>Test 1 message</p>
             </div>
 
-            <div class="chat self">
-                <p class="chat-message">Test 2 message Test 2 message Test 2 message Test 2 message Test 2 message Test 2 message Test 2 message</p>
-            </div>
-
-            <div class="chat self">
-                <p class="chat-message">Test 2 message Test 2 message Test 2 message Test 2 message Test 2 message Test 2 message Test 2 message</p>
-            </div>
-
-            <div class="chat client">
-                <p class="chat-message">Test 1 message</p>
+            <div id="chat-message" class="chat self">
+                <!--Chat messages goes here-->
             </div>
 
         </div>
 
+        <textarea id="user" class="userbox" placeholder="Enter Username"></textarea>
         <div class="chat-form">
-            <textarea></textarea>
-            <button>Send</button>
+            <textarea id="message" placeholder="Write Text Here"></textarea>
+            <button onclick="SendMessage()">Send</button>
 
         </div>
     </div>
